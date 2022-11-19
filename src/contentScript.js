@@ -48,7 +48,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 document.addEventListener("click", function(e){
   e = e || window.event;
   var target = e.target || e.srcElement;   
-  var value = target.textContent.includes("DODAJ") || target.textContent.includes("dodaj");
+  var value = target.textContent.includes("DODAJ") || target.textContent.includes("dodaj") || target.textContent.includes("Dodaj");
+  value = value || target.textContent.includes("KUP") || target.textContent.includes("kup") || target.textContent.includes("Kup");
   if(value){
     console.log(target.textContent)
   };
