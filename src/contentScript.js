@@ -52,5 +52,16 @@ document.addEventListener("click", function(e){
   value = value || target.textContent.includes("KUP") || target.textContent.includes("kup") || target.textContent.includes("Kup");
   if(value){
     console.log(target.textContent)
+    chrome.runtime.sendMessage(
+      {
+        type: 'INCREMENTCOUNT_C',
+        payload: {
+          message: 'Increment current count',
+        },
+      },
+      response => {
+        console.log(response.message);
+      }
+    );
   };
 }, false);

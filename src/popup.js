@@ -109,4 +109,20 @@ import './popup.css';
       console.log(response.message);
     }
   );
+
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.type === 'INCREMENTCOUNT_P') {
+      const message = 'Incremented';
+      console.log("popup");
+      // Log message coming from the `request` parameter
+      updateCounter({
+        type: 'INCREMENT',
+      });
+      console.log(request.payload.message);
+      // Send a response message
+      sendResponse({
+        message,
+      });
+    }
+  });
 })();
