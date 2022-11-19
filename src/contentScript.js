@@ -47,11 +47,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 document.addEventListener("click", function(e){
   e = e || window.event;
-  var target = e.target || e.srcElement;   
+  var target = e.target || e.srcElement; 
+  
   var value = target.textContent.includes("DODAJ") || target.textContent.includes("dodaj") || target.textContent.includes("Dodaj");
   value = value || target.textContent.includes("KUP") || target.textContent.includes("kup") || target.textContent.includes("Kup");
+  
+  
+  
+ 
+  
   if(value){
-    console.log(target.textContent)
     chrome.runtime.sendMessage(
       {
         type: 'INCREMENTCOUNT_C',
@@ -63,5 +68,23 @@ document.addEventListener("click", function(e){
         console.log(response.message);
       }
     );
+    console.log(target.textContent);
+    
+    window.alert("that maybe you should consider idea of buying it. Ask yourself a couple of questions first:");
+    window.alert("1. What do I gain by buying this?");
+    window.alert("1. How long will it make me happy?");
+    window.alert("2. What do I gain by buying this?");
+    window.alert("3. Is there something else that can bring me joy instead?");
+    window.alert("Now you should understand better what are your real needs :) Good luck!");
+
+    var is_smart = target.textContent.includes("Smartphone") || target.textContent.includes("Smartfon") || target.textContent.includes("smartphone") || target.textContent.includes("telefon") || target.textContent.includes("Telefon");
+    
+    if(is_smart){
+      var answer3 = window.alert("Are you sure that you need new phone? If yes remember that you can give second life to your old one: https://www.orange.com/en/give-your-phone-second-life-orange ");
+    };
+
   };
+
+
+
 }, false);
