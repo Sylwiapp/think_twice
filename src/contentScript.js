@@ -45,9 +45,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 
-document.addEventListener("click", function(){
-  const value = document.body.textContent.includes("DODAJ");
+document.addEventListener("click", function(e){
+  e = e || window.event;
+  var target = e.target || e.srcElement;   
+  var value = target.textContent.includes("DODAJ") || target.textContent.includes("dodaj");
   if(value){
-    console.log("Jest")
+    console.log(target.textContent)
   };
 }, false);
