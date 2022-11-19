@@ -69,18 +69,22 @@ document.addEventListener("click", function(e){
       }
     );
     console.log(target.textContent);
+    var qArray = [
+      "What do you gain by buying this?",
+      "How long will it make you happy?",
+      "What do you gain by buying this",
+      "Is there something else that can bring you joy instead?"
+    ];
+    var text2 = qArray[Math.floor(Math.random()*qArray.length)];
+    var alert_start = "that maybe you should consider idea of buying it.                                  ";
+    var alert_text = alert_start + text2 ;
     
-    window.alert("that maybe you should consider idea of buying it. Ask yourself a couple of questions first:");
-    window.alert("1. What do I gain by buying this?");
-    window.alert("1. How long will it make me happy?");
-    window.alert("2. What do I gain by buying this?");
-    window.alert("3. Is there something else that can bring me joy instead?");
-    window.alert("Now you should understand better what are your real needs :) Good luck!");
+    window.alert(alert_text);
 
-    var is_smart = target.textContent.includes("Smartphone") || target.textContent.includes("Smartfon") || target.textContent.includes("smartphone") || target.textContent.includes("telefon") || target.textContent.includes("Telefon");
+    var is_smart = document.body.textContent.includes("Smartphone") || document.body.textContent.includes("Smartfon") || document.body.textContent.includes("smartphone") || document.body.textContent.includes("telefon") || target.textContent.includes("Telefon");
     
     if(is_smart){
-      var answer3 = window.alert("Are you sure that you need new phone? If yes remember that you can give second life to your old one: https://www.orange.com/en/give-your-phone-second-life-orange ");
+    window.alert("Are you sure that you need new phone? If yes remember that you can give second life to your old one: https://www.orange.com/en/give-your-phone-second-life-orange ");
     };
 
   };
