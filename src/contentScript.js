@@ -60,15 +60,10 @@ document.addEventListener("click", function(e){
     console.log(target.textContent);
     
     window.alert("that maybe you should consider idea of buying it. Ask yourself a couple of questions first:");
-    
     window.alert("1. What do I gain by buying this?");
-
     window.alert("1. How long will it make me happy?");
-
     window.alert("2. What do I gain by buying this?");
-
     window.alert("3. Is there something else that can bring me joy instead?");
-
     window.alert("Now you should understand better what are your real needs :) Good luck!");
 
     var is_smart = target.textContent.includes("Smartphone") || target.textContent.includes("Smartfon") || target.textContent.includes("smartphone") || target.textContent.includes("telefon") || target.textContent.includes("Telefon");
