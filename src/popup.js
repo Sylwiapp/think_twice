@@ -58,6 +58,9 @@ import './popup.css';
           alltitle.innerHTML = "Awesome job!<br>Keep going!";
           alltitle.style.color = "#008000";
         };
+        if(newCount < 0){
+          newCount = 0;
+        };
       } else {
         newCount = count;
       }
