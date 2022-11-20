@@ -44,8 +44,20 @@ import './popup.css';
 
       if (type === 'INCREMENT') {
         newCount = count + 1;
+        console.log('Increment');
+        if(newCount > 3){
+          const alltitle = document.getElementById("alltitle");
+          alltitle.innerHTML = "You can still improve.<br>Let's do it together!";
+          alltitle.style.color = "#c78306";
+        };
       } else if (type === 'DECREMENT') {
         newCount = count - 1;
+        console.log('Decrement');
+        if(newCount <= 3){
+          const alltitle = document.getElementById("alltitle");
+          alltitle.innerHTML = "Awesome job!<br>Keep going!";
+          alltitle.style.color = "#008000";
+        };
       } else {
         newCount = count;
       }
@@ -116,7 +128,7 @@ import './popup.css';
       // Send a response message
       sendResponse({
         message,
-      });
+      }); 
     }
   });
 })();
