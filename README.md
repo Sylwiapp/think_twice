@@ -1,15 +1,12 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Stopit
+# <img src="public/icons/icon_48.png" width="45" align="left"> Think Twice
 
-My Chrome Extension
+Tool which enables you to rethink your purchases
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Asking questions making you think twice on your purchase
+- Tracker of your buy count for a day
 
-## Install
-
-[**Chrome** extension]()
 
 ## Contribution
 
